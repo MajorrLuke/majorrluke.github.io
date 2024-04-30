@@ -1,24 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Major Luke - Omnichannel Platform Supplier</title>
+    <title>Major Luke - Fornecedor de Plataforma Omnichannel</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #666;
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
             text-align: center;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             padding: 40px;
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
         h1 {
             font-size: 42px;
@@ -32,20 +62,41 @@
         }
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #fff;
             font-weight: bold;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #0056b3;
         }
         .features {
             margin-top: 50px;
             text-align: left;
         }
         .feature {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease;
+        }
+        .feature:nth-child(even) {
+            animation-delay: 0.5s;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .feature h2 {
-            font-size: 24px;
+            font-size: 28px;
             color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .feature p {
             font-size: 16px;
@@ -54,25 +105,46 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Major Luke</h1>
-        <p>Your  premier omnichannel platform supplier.</p>
-        <a href="#">Discover More</a>
-
+    <header>
+        <h1>Major Luke</h1>
+    </header>
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#about">Sobre</a>
+        <a href="#services">Serviços</a>
+        <a href="#contact">Contato</a>
+    </nav>
+    <div id="home" class="container">
+        <h2>Bem-vindo à Major Luke</h2>
+        <p>Sua principal fornecedora de plataforma omnichannel.</p>
+        <a href="#services">Descubra Mais</a>
+    </div>
+    <div id="about" class="container">
+        <h2>Sobre Nós</h2>
+        <p>A Major Luke está localizada em Barueri, São Paulo. Somos especializados em fornecer soluções de chatbot omnichannel para nossos clientes, ajudando-os a oferecer uma experiência excepcional aos seus próprios clientes em todos os canais.</p>
+    </div>
+    <div id="services" class="container">
+        <h2>Nossos Serviços</h2>
         <div class="features">
             <div class="feature">
-                <h2>Seamless Integration</h2>
-                <p>Our platform seamlessly integrates with your existing systems, ensuring a smooth transition.</p>
+                <h3>Integração Perfeita</h3>
+                <p>Nossa plataforma integra-se perfeitamente aos seus sistemas existentes, garantindo uma transição suave.</p>
             </div>
             <div class="feature">
-                <h2>Enhanced Customer Experience</h2>
-                <p>Deliver an exceptional customer experience across all channels with our innovative solutions.</p>
+                <h3>Experiência do Cliente Aprimorada</h3>
+                <p>Oferecemos soluções inovadoras para ajudá-lo a proporcionar uma experiência excepcional ao cliente em todos os canais.</p>
             </div>
             <div class="feature">
-                <h2>Analytics & Insights</h2>
-                <p>Gain valuable insights into customer behavior and market trends with our advanced analytics tools.</p>
+                <h3>Análises e Insights</h3>
+                <p>Obtenha insights valiosos sobre o comportamento do cliente e as tendências de mercado com nossas ferramentas avançadas de análise.</p>
             </div>
         </div>
+    </div>
+    <div id="contact" class="container">
+        <h2>Entre em Contato</h2>
+        <p>Estamos aqui para ajudar. Entre em contato conosco para saber mais sobre nossos serviços ou para solicitar uma demonstração.</p>
+        <p>Email: info@majorluke.com</p>
+        <p>Telefone: (11) 1234-5678</p>
     </div>
 </body>
 </html>
